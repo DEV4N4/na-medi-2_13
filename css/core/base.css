@@ -1,0 +1,154 @@
+/* 
+  240507
+  작성자: 장한원
+  용도: 기본 스타일 초기화, font-face 설정
+*/
+@charset "utf-8";
+
+:root {
+  --primary: #f1a28d;
+  --color-black: #343434;
+  --color-gray500: #444444;
+  --color-gray300: #c3c3c5;
+  --color-gray200: #e6e6e6;
+  --color-gray100: #f7f7f7;
+  --color-orange500: #ef7c5f;
+  --color-orange400: #f0886f; 
+}
+
+@font-face {
+  font-family: "pretendard-regular";
+  src: url(../fonts/Pretendard-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "pretendard-medium";
+  src: url(../fonts/Pretendard-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "pretendard-bold";
+  src: url(../fonts/Pretendard-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "pretendard-black";
+  src: url(../fonts/Pretendard-Black.woff) format("woff");
+}
+
+@font-face {
+  font-family: "moonstar";
+  src: url(../fonts/Moonstar-Italic.woff) format("woff");
+}
+
+@font-face {
+  font-family: "godo-medium";
+  src: url(../fonts/GodoM.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "godo-bold";
+  src: url(../fonts/GodoB.otf) format("opentype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'pretendard-regular', dotum, sans-serif;
+  color: var(--color-black);
+  background: #fff;
+  overflow-x: hidden;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
+
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input,
+select,
+option {
+  accent-color: var(--primary);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--color-orange500);
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: "pretendard-regular";
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+fieldset,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "pretendard-bold"; 
+  font-weight: normal;
+  letter-spacing: -2px;
+}
+
+h1 {
+  font-size: 4.01vw;
+}
+
+h2 {
+  font-size: 2.5vw;
+}
+
+p {
+  font-family: "pretendard-medium";
+  letter-spacing: -1px;
+}
+
+address {
+  font-style: normal;
+}
+
+img[src$=".jpg"], img[src$=".png"] {
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}

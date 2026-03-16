@@ -1,0 +1,914 @@
+
+/* ================= 빠른상담 ================= */
+.mo_counselBtn {
+  display: none;
+}
+
+.bot_counsel_wrap {
+  background-color:#fff;
+  color: var(--color-black);
+  width:100%;
+  overflow:hidden;
+  padding:15px 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#shadow {
+  opacity: 0;
+  visibility: visible;
+  z-index: -99;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.bot_counsel_wrap .foot_inner {
+  width: 1440px;
+  margin: 0 auto;
+}
+  
+.bot_counsel_wrap .foot_inner:after {
+  content:"";
+  clear:both;
+  display:block;
+}
+
+.bot_counsel_wrap .hide_label{
+  position:absolute;
+  z-index:-1;
+  text-indent:-9999px;
+}
+
+.bot_counsel_wrap .txt_wrap{
+  float:left;
+}
+
+.bot_counsel_wrap .txt_wrap > h3{
+  font-size:33px;
+  letter-spacing:-1px;
+  color:#fff;
+  font-weight:500;
+}
+
+.bot_counsel_wrap .txt_wrap > h3 > img{
+  width: 65%;
+  max-width: 156px;
+}
+
+.bot_counsel_wrap .txt_wrap > .b_privacy label{
+  display:inline-flex;
+  color:var(--color-black);
+  font-size: 16px;
+  vertical-align:middle;
+}
+
+/* 체크박스 */
+#is_agree2 {
+  width: 19px;
+  height: 19px;
+  margin-right: 6px;
+}
+
+.bot_counsel_wrap .txt_wrap > .b_privacy #bchk{
+  width:20px;
+  height:20px;
+  vertical-align:middle;
+  margin-right:5px;
+}
+
+.bot_counsel_wrap .txt_wrap > .b_privacy a{
+  font-weight: 500;
+  font-size:12px;
+  display:inline-block;
+  padding: 5px 9px;
+  background-color:var(--primary);
+  color:#fff;
+  margin-left:10px;
+  vertical-align:middle;
+  border-radius: 15px;
+}
+
+.bot_counsel_wrap .form_wrap{
+  float:right;
+  padding-top:9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bot_counsel_wrap .f_cate, 
+.bot_counsel_wrap .f_name,
+.bot_counsel_wrap .f_tel,
+.bot_counsel_wrap .fix_text{
+  box-sizing:border-box;
+  width:226px;
+  height:45px;
+  font-size:16px;
+  padding:0 15px;
+  border:0;
+  border-radius: 7px;
+  font-family: 'pretendard-regular';
+  border: 1px solid var(--primary);
+}
+
+.bot_counsel_wrap .f_cate, 
+.bot_counsel_wrap .f_name,
+.bot_counsel_wrap .f_tel {
+  background-image: url(../../img/icon/require.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+}
+
+.bot_counsel_wrap .f_name{
+  margin-left: 13px;
+}
+
+.bot_counsel_wrap .f_tel{
+  margin-left:13px;
+}
+
+.bot_counsel_wrap .f_submit{
+  box-sizing:border-box;
+  border:none;
+  width:206px;
+  height:45px;
+  font-size:20px;
+  font-weight: 700;
+  color:#fff;
+  text-align:center;
+  background-color:var(--primary);
+  margin-left:13px;
+  cursor:pointer;
+  border:0;
+  border-radius: 30px;
+}
+
+.bot_counsel_wrap .fix_text{
+  border: none;
+  resize: none;
+  margin-left:13px;
+  height:45px;
+  padding-top:12px;
+  border: 1px solid var(--primary);
+}
+
+/* 개인정보처리방침 팝업창 */
+.contbox{
+  display:none;
+  position: fixed;
+  font-weight: 300;
+  height:400px;
+  max-width: 600px;
+  width: 600px;
+  background: #fff;
+  overflow-y: scroll;
+  border: 2px solid #555;
+  top: 20%;
+  text-align: left;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.contbox h3 {
+  font-size:18px;
+  margin:50px 15px 10px; 
+  font-weight:500; 
+  color:#000
+}
+
+.contbox p {
+  margin:15px 15px 0px 15px; 
+  color:#888888; 
+  line-height:21px;
+  font-size:13px;
+  color:#3a3a3a; 
+  font-weight:400;
+}
+
+.contbox dl{
+  padding: 15px 10px;
+}
+
+.contbox dl dt{
+  margin-top: 10px;
+  color:#000; 
+  font-weight:bold; 
+  padding:6px 10px;
+  font-size:13px; 
+  background:#f0f0f0;  
+  font-weight:500;
+}
+
+.contbox dl dd{
+  font-size:12px; 
+  color:#515151; 
+  line-height:21px;
+  padding:13px 15px 0px;
+  font-weight:400;
+}
+
+.popoff { 
+  background:#252525; 
+  position:absolute; 
+  right:0; 
+  top:0; 
+  padding:15px; 
+  text-align:center;
+}
+	
+.popon {
+  color:#555; 
+  font-weight:300;
+  font-size:13px;
+  letter-spacing:0.02em; 
+  display:block;
+  margin:2px 0 0 4px;
+}
+
+.pop_title {
+  font-size: 28px; 
+  text-align: center; 
+  display: block; 
+  letter-spacing: -2px;
+  color: #222;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd; 
+  padding-bottom: 20px; 
+  width: 730px;
+  margin: 0 auto; 
+  margin-top: 30px; 
+  margin-bottom: 20px;
+}
+
+.popoff img {
+  opacity:0.5;
+  width:15px
+}
+
+.msg_sound_only, .sound_only {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+@media (min-width: 344px) and (max-width:767px){
+  .mo_counselBtn {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+    background-color: var(--primary);
+  }
+
+  .mo_counselBtn button {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'pretendard-bold';
+  }
+
+  .bot_counsel_wrap { 
+    border-radius: 20px;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    width: 300px;
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -99;
+  }
+  
+  .bot_counsel_wrap.open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+  }
+
+  #shadow.open {
+    opacity: 1;
+    visibility: visible;
+    z-index: 98;
+  }
+
+  .bot_counsel_wrap .mo-closeBtn {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+  }
+
+  .bot_counsel_wrap .mo-closeBtn img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .bot_counsel_wrap .foot_inner{
+    width:100%!important;
+  }
+
+  .bot_counsel_wrap .txt_wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bot_counsel_wrap .txt_wrap > h3 > img{
+    width: 100%;
+  }
+  
+  .bot_counsel_wrap .txt_wrap .b_privacy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bot_counsel_wrap .txt_wrap > .b_privacy label {
+    margin-right: 23px;
+  }
+
+  .bot_counsel_wrap .form_wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bot_counsel_wrap .form_wrap input, 
+  .bot_counsel_wrap .form_wrap textarea,
+  .bot_counsel_wrap .form_wrap select {
+    margin-left: 0 !important;
+    margin-bottom: 10px;
+  }
+  
+  .bot_counsel_wrap .f_submit {
+    width: 226px;
+  }
+
+  .contbox {
+    width: 96%;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 1024px) and (max-width:1520px){
+	.bot_counsel_wrap .foot_inner{
+    width:1180px !important;
+  }
+	.bot_counsel_wrap .txt_wrap {
+    width: 100%;position: relative;
+  }
+	.bot_counsel_wrap .txt_wrap > .b_privacy {
+    position: absolute;top: 15px;right: 0px;
+  }
+	.bot_counsel_wrap .form_wrap {
+    width: 100%;
+  }
+}
+
+/* ================= END 빠른상담 ================= */
+
+
+footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  text-align: center;
+  display: block;
+  width: calc(100vw - (100vw - 100%));
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========== 진료시간/오시는길 ========== */
+.our-info {
+  padding-top: 88px;
+}
+
+.our-info .info-container {
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 58px;
+}
+
+.our-info .info-wrap {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.our-info .info-wrap.t {
+  height: 600px;
+  margin: 59px 0 75px 0 ;
+}
+
+.our-info .info-wrap .wrap-l{
+  padding-left: 14px;
+  width: calc(50% - 14px) !important;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.our-info .info-wrap .wrap-l,
+.our-info .info-wrap .wrap-r {
+  width: 50%;
+}
+
+.wrap-l .article {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap-l .article h3 {
+  font-family: 'godo-bold';
+  font-size: 1.7vw;
+  letter-spacing: 0;
+  width: fit-content;
+  height: 3.385vw;
+  padding: 0 45px;
+  border-radius: 32.5px;
+  background-color: #fff;
+  margin-bottom: 35px;
+}
+
+.office-hour .info-list {
+  display: flex;
+  flex-direction: column;
+  font-family: 'pretendard-medium';
+  font-size: 1.667vw; 
+}
+
+.office-hour .info-item {
+  display: flex;
+  width: 100%;
+  height: 74px;
+}
+
+.office-hour .info-item:nth-of-type(3) {
+  height: 35px;
+}
+
+.office-hour .info-item:nth-of-type(4) {
+  margin-top: 18px;
+}
+
+.office-hour .info-item label {
+  font-family: 'pretendard-bold' !important;
+  text-align: justify;
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: fit-content; 
+}
+
+.office-hour .info-item label::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.office-hour .info-item span {
+  line-height: 1.3;
+  margin-left: 5px;
+  text-align: left;
+}
+
+.office-hour small {
+  font-size: 1vw;
+  position: absolute;
+  height: fit-content;
+}
+
+.office-addr p {
+  font-family: 'pretendard-bold';
+  font-size: 1.667vw; 
+  line-height: 1;
+}
+
+.office-addr p,
+.office-hour .info-item,
+.t1,
+.t2,
+.des3 .map_button {
+  margin-left: 46px;
+}
+
+.office-addr small {
+  font-size: 1.25vw;
+  font-family: 'pretendard-medium';
+}
+
+/* 지도 스타일 */
+.wrap-r.map {
+  width: 720px;
+  height: 600px;
+  margin-right: 60px;
+}
+
+.wrap_controllers  {
+  display: none;
+}
+
+.wrap_map {
+  width: 100%;
+  height: 100% !important;
+}
+
+.info-wrap.b .des1,
+.info-wrap.b .des2 {
+  position: relative;
+  height: fit-content;
+  margin-bottom: 46px;
+}
+
+.info-wrap.b .des1 p,
+.info-wrap.b .des2 p {
+  font-size: 1.4vw;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* .info-wrap.b .des1::after,
+.info-wrap.b .des2::after{
+  content: '';
+  position: absolute;
+  right: -17%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 70%;
+  background-color: var(--color-gray200);
+} */
+
+.des3 .map_button {
+  width: 10.625vw;
+  height: 2.799vw;
+  border-radius: 26.88px;
+  background-color: var(--primary);
+  color: #fff;
+  font-family: 'godo-medium';
+  font-size: 1.458vw;
+  transition-duration: 0.5s;
+}
+
+.des3 .map_button:hover {
+  background-color: var(--color-orange500);
+}
+
+/* 약도 이미지 */
+.info-wrap.b .wrap-r img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+@media (min-width: 344px) and (max-width: 767px) {
+  footer .inner-container {
+    width: 100%;
+  }
+
+  .our-info {
+    padding: 50px 0;
+    padding-bottom: 0;
+  }
+
+  .our-info .info-container {
+    justify-content: center;
+  }
+
+  .our-info .info-wrap {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .our-info .info-wrap.t {
+    margin: 0 0 25px 0;
+  }
+
+  .our-info .info-wrap .wrap-l {
+    width: calc(100% - 28px) !important;
+    padding: 0 14px;
+    
+  }
+
+  .our-info .info-wrap .wrap-r {
+    width: 100% !important;
+  }
+
+  .office-hour .info-list {
+    padding: 0 16px;
+  }
+
+  .office-hour .info-item {
+    margin-left: 0;
+    height: 50px;
+  }
+
+  .office-hour .info-item span {
+    margin: 0;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  .office-hour .info-item label {
+    width: 64px;
+  }
+
+  .office-hour .info-list,
+  .office-addr p,
+  .info-wrap.b .des1 p, 
+  .info-wrap.b .des2 p,
+  .des3 .map_button,
+  .wrap-l .article h3,
+  .info-item .accent {
+    font-size: 4.467vw !important;
+  }
+
+  .wrap-l .article h3 {
+    margin-bottom: 10px;
+    padding: 0px 20px;
+    height: 9vw;
+  }
+
+  .article h3 {
+    font-size: 3.5vw !important;
+  }
+
+  .info-wrap.b .des1, .info-wrap.b .des2 {
+    margin-bottom: 20px;
+  }
+
+  .t1 {
+    width: calc(100% - 57px);
+  }
+
+  .t2 {
+    position: relative;
+  }
+
+  .t2 small {
+    position: absolute;
+    bottom: 33px;
+  }
+  
+  .office-addr p,
+  .t1, 
+  .t2, 
+  .des3 .map_button {
+    margin-left: 16px !important;
+  }
+
+  .office-hour small,
+  .office-addr small {
+    font-size: 3vw;
+    position: static;
+  }
+
+  .office-hour .info-item:nth-of-type(4) {
+    margin-top: 0;
+    font-size: 5vw !important;
+  }
+
+  .office-addr p {
+    margin-left: 16px;
+  }
+
+  #daumRoughmapContainer1545364272295 {
+    border-radius: 0 !important;
+    height: 258px;
+  }
+
+  .info-wrap.b .des1 p,
+  .info-wrap.b .des2 p {
+    line-height: 1.6;
+  }
+
+  .des3 .map_button {
+    width: 27.625vw;
+    height: 8.799vw;
+  }
+
+  .info-wrap.b .wrap-r {
+    height: fit-content !important;
+    margin-top: 25px;
+  }
+
+  .info-wrap.b .wrap-r img {
+    border-radius: 0;
+  }
+}
+
+/* ========== END 진료시간/오시는길 ========== */
+
+/* 약도보내기 */
+.sms-map {
+  position: fixed;
+  top: 30%;
+  left: 25%;
+  z-index: 9999;
+  background: url(../../img/footer/sms_bg.png) no-repeat top center;
+  width: 240px;
+  height: 410px;
+  display: flex;
+  justify-content: center;
+}
+
+#f_sms {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  padding-top: 280px;
+}
+
+.sms-map .close {
+  display:inline-block;
+  position: absolute;
+  top: 18px;
+  right: 10px;
+}
+
+.sms-map .close b {
+  color: var(--color-gray500);
+  font-family: 'pretendard-bold';
+  font-size: 18px;
+}
+
+.sms-map .number {
+  padding:0 10px;
+  font-family: 'pretendard-regular';
+}
+
+.sms-map .form-group {
+  margin-bottom: 5px;
+  width: 54px;
+  padding: 8px 3px;
+  font-family: 'pretendard-regular';
+  border: 1px solid var(--color-gray300);
+  border-radius: 6px;
+}
+
+.sms-map textarea {
+  display:none;
+}
+
+.sms-map .agree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.sms-map .agree input {
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+}
+
+.sms-map .agree a {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.sms-map .button input.f_submit{
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  background: var(--color-orange500);
+  border: 3px solid #fff0ed;
+  box-sizing: border-box;
+  color: #fff;
+  width: 60%;
+  border-radius: 50px;
+  padding: 5px 0;
+  margin: 23px auto 0 auto;
+  font-family: 'pretendard-medium';
+}
+
+.sms-btn {
+  display:block;
+  width:100%;
+}
+
+.sms-btn li {
+  display: inline-block;
+  width:30%; 
+  text-align:center; 
+  border-radius:5px; 
+  padding-top:12px; 
+  margin: 0px 2px 5px 2px;
+}
+
+@media (max-width:600px){
+	.sms-map {
+    position:fixed; 
+    top:100px; 
+    left:20px;
+    right:0px;
+  }
+
+}
+
+#footer .addr-article {
+  width: 100%;
+  background-color: #f7f4f0;
+  padding-bottom: 110px;
+}
+
+#footer .tail_links {
+  position: relative;
+  line-height: 50px;
+  font-size: 15px;
+}
+
+#footer .tail_links:before {
+  position: absolute;
+  top: 0;
+  background: #FFF;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
+  content: "";
+}
+
+#footer .tail_links a {
+  position: relative;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+#footer .tail_links a:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  height: 10px;
+  width: 1px;
+  left: -10px;
+  background: #ddd;
+  content: "";
+}
+
+#footer .tail_links a:first-child:before {
+  display: none;
+}
+
+#footer h1 {
+  margin-top: 20px
+}
+
+#footer .footer-logo {
+  width: 170px;
+  height: 70px;
+  display: inline-block;
+}
+
+#footer article {
+  overflow: hidden;
+}
+
+#footer article address {
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+#footer article p {
+  color: #999;
+  font-size: 13.5px;
+  line-height: 2;
+  font-family: 'pretendard-regular';
+}
+
+#footer article span {
+  white-space: nowrap;
+  padding-right: 10px
+}
+
+@media (min-width:344px) and (max-width: 767px) {
+  #footer .tail_links a {
+    font-size: 2.8vw;
+  }
+
+  #footer .addr-article {
+    padding-bottom: 30px;
+  }
+}

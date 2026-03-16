@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>[나를 위한 산부인과]</title>
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+
+    <style type="text/css">
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body,
+      td {
+        font: 0.9em "맑은 고딕", Sans-Serif;
+        color: #6b6b6b;
+      }
+      td {
+        font-size: 11px;
+        vertical-align: middle;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #g_header h1 {
+        font-weight: 600;
+        min-width: 1024px;
+        height: 60px;
+        line-height: 60px;
+        padding-left: 28px;
+        margin-top: 0;
+        color: #fff;
+        background: #ffa2a2;
+        text-align: center;
+      }
+      #g_body {
+        min-width: 1024px;
+        padding: 0 30px 50px;
+      }
+      #g_footer {
+        padding: 30px;
+        text-align: right;
+      }
+      .guide_table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 40px;
+      }
+      .guide_table thead th {
+        background: #f8f8fa;
+        padding: 3px;
+        border: solid 1px #e0e0e0;
+        color: #212329;
+        font-size: 12px;
+      }
+      .guide_table tbody td {
+        padding: 4px 10px;
+        border: solid 1px #e0e0e0;
+        color: #212329;
+      }
+      .guide_table tbody td:nth-child(6),
+      .guide_table tbody td:nth-child(7),
+      .guide_table tbody td:nth-child(8),
+      .guide_table tbody td:nth-child(10) {
+        text-align: center;
+      }
+      .guide_table tbody td.filelink .link {
+        text-decoration: none;
+        color: #6588e6;
+      }
+      .guide_table tbody td.filelink .link:hover {
+        text-decoration: underline;
+      }
+      .guide_table tbody td.filelink .link:focus {
+        font-weight: 600;
+        color: #f45f5f;
+        text-decoration: underline;
+      }
+      .guide_table tbody tr td:first-child {
+        text-align: center;
+      }
+      .guide_table tbody tr:hover {
+        background: #f8f8fa;
+      }
+      .end {
+        color: #212329;
+      }
+      .ing {
+        color: #6496dc;
+      }
+      .center {
+        text-align: center;
+      }
+      .v2 {
+        background-color: #ffa2a22c;
+      }
+      .v2 * {
+        font-weight: 600;
+        font-size: 11.5px;
+      }
+
+      .delete {
+        background-color: #ededed;
+      }
+      .delete * {
+        text-decoration: line-through;
+      }
+      .board .tit {
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .board .data {
+        padding: 30px;
+        margin-bottom: 10px;
+        border: 1px solid #e0e0e0;
+        background: #f7f7f7;
+      }
+      .board .data li ~ li {
+        padding-top: 16px;
+        border-top: 1px solid #e4e6ef;
+      }
+      .box {
+        border: 1px solid #dedede;
+        display: inline-block;
+        padding: 12px;
+        margin-top: 4px;
+        background-color: #fff;
+        border-radius: 4px;
+      }
+      table tbody tr td:last-child {
+        text-align: left;
+        font-weight: 600;
+      }
+      .get_date {
+        font-size: 17px;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .get_date.new {
+        color: #f45f5f;
+      }
+      td.txtLeft {
+        text-align: left !important;
+      }
+      td.notLast {
+        text-align: center !important;
+        font-weight: normal !important;
+      }
+      tr.section td {
+        background-color: #eaeeffa9;
+        font-size: 12px;
+        font-weight: 900;
+      }
+      h2 {
+        position: relative;
+        display: inline-block;
+        padding-right: 20px;
+        margin-top: 20px;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="g_header">
+      <h1>나를 위한 산부인과</h1>
+    </div>
+    <div id="g_body">
+      <div class="contents">
+        <h2 style="font-size: 36px; font-weight: bold">Page List</h2>
+        <table class="guide_table" id="guide_table">
+          <colgroup>
+            <col width="2%" />
+            <col width="15%" />
+            <col width="20%" />
+            <!-- <col width="12%" /> -->
+            <col width="25%" />
+            <col width="5%" />
+            <col width="7%" />
+            <col width="*" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">1depth</th>
+              <th scope="col">2depth</th>
+              <!-- <th scope="col">3depth</th> -->
+              <th scope="col">link</th>
+              <th scope="col">상태</th>
+              <th scope="col">완료날짜</th>
+              <th scope="col">비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td>나를위한소개</td>
+              <td>나를위한만의특별함</td>
+              <!-- <td></td> -->
+              <td class="filelink">
+                <a
+                  href="html/01나를위한소개_나를위한만의특별함.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  01나를위한소개_나를위한만의특별함.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>26.01.04</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>의료진소개</td>
+              <td class="filelink">
+                <a
+                  href="html/01나를위한소개_의료진소개.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  01나를위한소개_의료진소개.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>26.01.09</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td>여성성형클리닉</td>
+              <td>쁘띠소음순성형</td>
+              <!-- <td></td> -->
+              <td class="filelink">
+                <a
+                  href="html/02여성성형클리닉_쁘띠소음순성형.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  02여성성형클리닉_쁘띠소음순성형.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.05</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>소음순수술</td>
+              <td class="filelink">
+                <a
+                  href="html/02여성성형클리닉_소음순수술.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  02여성성형클리닉_소음순수술.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.07</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>대음순성형</td>
+              <td class="filelink">
+                <a
+                  href="html/02여성성형클리닉_대음순성형.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  02여성성형클리닉_대음순성형.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.08</td>
+              <td></td>
+            </tr>
+
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>음핵수술</td>
+              <td class="filelink">
+                <a
+                  href="html/02여성성형클리닉_음핵수술.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  02여성성형클리닉_음핵수술.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.18</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>회음체성형</td>
+              <td class="filelink">
+                <a
+                  href="html/02여성성형클리닉_회음체성형.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  02여성성형클리닉_회음체성형.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.18</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>질축소술</td>
+              <td class="filelink">
+                <a
+                  href="html/02여성성형클리닉_질축소술.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  02여성성형클리닉_질축소술.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.18</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>질필러</td>
+              <td class="filelink">
+                <a
+                  href="html/02여성성형클리닉_질필러.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  02여성성형클리닉_질필러.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.18</td>
+              <td></td>
+            </tr>
+
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>처녀막재생술</td>
+              <td class="filelink">
+                <a
+                  href="html/02여성성형클리닉_처녀막재생술.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  02여성성형클리닉_처녀막재생술.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.18</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>유두축소레이저</td>
+              <td class="filelink">
+                <a
+                  href="html/02여성성형클리닉_유두축소레이저.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  02여성성형클리닉_유두축소레이저.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.18</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>함몰유두교정레이저</td>
+              <td class="filelink">
+                <a
+                  href="html/02여성성형클리닉_함몰유두교정레이저.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  02여성성형클리닉_함몰유두교정레이저.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.18</td>
+              <td></td>
+            </tr>
+
+            <tr class="dep01">
+              <td class="no"></td>
+              <td>레이저질타이트닝클리닉</td>
+              <td>질타이트닝프로그램</td>
+              <!-- <td></td> -->
+              <td class="filelink">
+                <a
+                  href="html/03레이저_질타이트닝프로그램.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  03레이저_질타이트닝프로그램.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.26</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>트리플크라운질타이트닝</td>
+              <td class="filelink">
+                <a
+                  href="html/03레이저_트리플크라운질타이트닝.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  03레이저_트리플크라운질타이트닝.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.26</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>비비브</td>
+              <td class="filelink">
+                <a
+                  href="html/03레이저_비비브.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  03레이저_비비브.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.26</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>질쎄라</td>
+              <td class="filelink">
+                <a
+                  href="html/03레이저_질쎄라.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  03레이저_질쎄라.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.26</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>리비브</td>
+              <td class="filelink">
+                <a
+                  href="html/03레이저_리비브.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  03레이저_리비브.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.26</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>모나리자터치</td>
+              <td class="filelink">
+                <a
+                  href="html/03레이저_모나리자터치.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  03레이저_모나리자터치.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.26</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>여성성형레이저</td>
+              <td class="filelink">
+                <a
+                  href="html/03레이저_여성성형레이저.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  03레이저_여성성형레이저.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.11.26</td>
+              <td></td>
+            </tr>
+
+            <tr class="dep01">
+              <td class="no"></td>
+              <td>미백클리닉</td>
+              <td>외음부미백</td>
+              <td class="filelink">
+                <a
+                  href="html/04미백클리닉_외음부미백.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  04미백클리닉_외음부미백.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.01</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>유두미백</td>
+              <td class="filelink">
+                <a
+                  href="html/04미백클리닉_유두미백.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  04미백클리닉_유두미백.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.01</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>바디트리플화이트닝</td>
+              <td class="filelink">
+                <a
+                  href="html/04미백클리닉_바디트리플화이트닝.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  04미백클리닉_바디트리플화이트닝.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.01</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td>검진클리닉</td>
+              <td>나를위한기본검진</td>
+              <td class="filelink">
+                <a
+                  href="html/05검진클리닉_나를위한기본검진.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  05검진클리닉_나를위한기본검진.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.05</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>나를위한유학전검진/미혼여성검진</td>
+              <td class="filelink">
+                <a
+                  href="html/05검진클리닉_유학전검진.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  05검진클리닉_유학전검진.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.05</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>산전검사</td>
+              <td class="filelink">
+                <a
+                  href="html/05검진클리닉_산전검사.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  05검진클리닉_산전검사.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.05</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>갱년기종합검진</td>
+              <td class="filelink">
+                <a
+                  href="html/05검진클리닉_갱년기종합검진.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  05검진클리닉_갱년기종합검진.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.05</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>자궁경부암검진</td>
+              <td class="filelink">
+                <a
+                  href="html/05검진클리닉_자궁경부암검진.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  05검진클리닉_자궁경부암검진.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.05</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td>부인과클리닉</td>
+              <td>외음부소수술</td>
+              <td class="filelink">
+                <a
+                  href="html/06부인과클리닉_외음부소수술.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  06부인과클리닉_외음부소수술.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.12</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>질염/성병</td>
+              <td class="filelink">
+                <a
+                  href="html/06부인과클리닉_질염성병.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  06부인과클리닉_질염성병.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.12</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>생리/출혈/월경이상</td>
+              <td class="filelink">
+                <a
+                  href="html/06부인과클리닉_생리.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  06부인과클리닉_생리.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.12</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>방광염</td>
+              <td class="filelink">
+                <a
+                  href="html/06부인과클리닉_방광염.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  06부인과클리닉_방광염.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.12</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>요실금</td>
+              <td class="filelink">
+                <a
+                  href="html/06부인과클리닉_요실금.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  06부인과클리닉_요실금.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.17</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>갱년기자궁하수</td>
+              <td class="filelink">
+                <a
+                  href="html/06부인과클리닉_갱년기자궁하수.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  06부인과클리닉_갱년기자궁하수.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.17</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>영양수액클리닉</td>
+              <td class="filelink">
+                <a
+                  href="html/06부인과클리닉_영양수액클리닉.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  06부인과클리닉_영양수액클리닉.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.17</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>예방주사</td>
+              <td class="filelink">
+                <a
+                  href="html/06부인과클리닉_예방주사.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  06부인과클리닉_예방주사.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.17</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td>임신피임</td>
+              <td>임신</td>
+              <td class="filelink">
+                <a
+                  href="html/07임신피임_임신.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  07임신피임_임신.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.18</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>피임</td>
+              <td class="filelink">
+                <a
+                  href="html/07임신피임_피임.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  07임신피임_피임.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.18</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td>내시경클리닉</td>
+              <td>자궁경</td>
+              <td class="filelink">
+                <a
+                  href="html/08내시경클리닉_자궁경.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  08내시경클리닉_자궁경.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.18</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>방광경</td>
+              <td class="filelink">
+                <a
+                  href="html/08내시경클리닉_방광경.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  08내시경클리닉_방광경.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>25.12.18</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td>피부/비만클리닉</td>
+              <td>제모클리닉</td>
+              <td class="filelink">
+                <a
+                  href="html/09피부비만클리닉_제모클리닉.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  09피부비만클리닉_제모클리닉.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>26.01.04</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>보톡스</td>
+              <td class="filelink">
+                <a
+                  href="html/09피부비만클리닉_보톡스.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  09피부비만클리닉_보톡스.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>26.01.04</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>피부클리닉</td>
+              <td class="filelink">
+                <a
+                  href="html/09피부비만클리닉_피부클리닉.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  09피부비만클리닉_피부클리닉.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>26.01.04</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>울핏바디</td>
+              <td class="filelink">
+                <a
+                  href="html/09피부비만클리닉_울핏바디.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  09피부비만클리닉_울핏바디.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>26.01.04</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>리포주사</td>
+              <td class="filelink">
+                <a
+                  href="html/09피부비만클리닉_리포주사.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  09피부비만클리닉_리포주사.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>26.01.04</td>
+              <td></td>
+            </tr>
+            <tr class="dep01">
+              <td class="no"></td>
+              <td></td>
+              <td>브이로리프팅</td>
+              <td class="filelink">
+                <a
+                  href="html/09피부비만클리닉_브이로.html"
+                  target="_blank"
+                  title="새창"
+                  class="link"
+                >
+                  09피부비만클리닉_브이로.html
+                </a>
+              </td>
+              <td class="center"><strong class="end">완료</strong></td>
+              <td>26.01.04</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="board">
+        <div class="tit">전달사항</div>
+        <ul class="data">
+          <li>
+            <strong class="get_date new">[]</strong>
+            <strong>1.</strong>
+            -
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      // 테이블 번호 삽입
+      (function () {
+        let num = 1,
+          tr = document.querySelectorAll("table tr");
+        for (let i = 1; i < tr.length; i++) {
+          if ($(tr).eq(i).hasClass("section")) {
+            continue;
+          }
+          tr[i].children[0].innerText = num;
+          num++;
+        }
+      })();
+    </script>
+  </body>
+</html>
