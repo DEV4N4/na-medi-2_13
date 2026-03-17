@@ -5,12 +5,16 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 120px;
+  /* margin-top: 120px; */
 }
 
 .plant_image {
   width: 100%;
   display: block;
+}
+
+.sec_form.reduce .guide_box.hd_implant ul {
+  margin-top: 7.5rem;
 }
 
 .sec_form.reduce .guide_box.hd_implant_f {
@@ -19,6 +23,7 @@
 
 .sec_form.reduce .guide_box.hd_implant_f .reduce_list {
   align-items: flex-start;
+  margin-top: 7.5rem;
 }
 
 .sec_form.reduce .guide_box.hd_implant_f .reduce_list .hd_implant_f_item {
@@ -85,7 +90,7 @@
   font-size: 4rem;
   letter-spacing: -0.135rem;
   font-weight: 800;
-  margin-top: 10rem;
+  margin-top: 7.5rem;
 }
 
 /* .sec_form.reduce .guide_box.hd_implant_f p {
@@ -93,3 +98,404 @@
   line-height: 1.64;
   letter-spacing: -0.07rem;
 } */
+
+.sec_form.reduce .guide_box.hd_implant_effect {
+  margin-top: 60px;
+  padding: 7.5rem 0;
+}
+
+.sec_form.reduce .guide_box.hd_implant_effect ul {
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 5rem;
+  padding: 0 1.5rem;
+}
+
+.sec_form.reduce .guide_box.hd_implant_effect .hd_implant_effect_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.sec_form.reduce .guide_box.hd_implant_effect .hd_implant_effect_item p {
+  margin-top: 0;
+}
+
+.sec_form.reduce
+  .guide_box.hd_implant_effect
+  .hd_implant_effect_item
+  .line_1_img {
+  width: 100%;
+  aspect-ratio: 860 / 975;
+}
+
+.sec_form.reduce
+  .guide_box.hd_implant_effect
+  .hd_implant_effect_item
+  .line_2_img {
+  width: 100%;
+  aspect-ratio: 860 / 615;
+}
+
+.sec_form.reduce .guide_box.hd_implant_collagen {
+  margin-top: 60px;
+  padding: 7.5rem 5rem;
+}
+
+.sec_form.reduce .guide_box.hd_implant_collagen ul {
+  display: flex;
+  gap: 6.3rem;
+}
+
+.sec_form.reduce .guide_box.hd_implant_collagen .coupling_list {
+  display: flex;
+  gap: 2rem;
+}
+
+.sec_form.reduce .guide_box.hd_implant_collagen .coupling_list_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sec_form.reduce .guide_box.hd_implant_collagen .coupling_list_item::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: -6.7rem;
+  transform: translate(-50%);
+  width: 3.5rem;
+  height: 2.35rem;
+  background: url(../images/icons/icon_arrow_double.png) no-repeat left top /
+    contain;
+}
+
+.sec_form.reduce
+  .guide_box.hd_implant_collagen
+  .coupling_list_item:last-child::after {
+  display: none;
+}
+
+.sec_form.reduce .guide_box.hd_implant_collagen .coupling_list_item img {
+  width: 100%;
+  max-width: 504px;
+  height: auto;
+}
+
+.sec_form.reduce .guide_box.hd_implant_collagen .coupling_list_item p {
+  margin-top: 0;
+  width: 100%;
+  background-color: #f69283;
+  padding: 0.7rem 0.2rem;
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: -0.06rem;
+  text-align: center;
+  border-radius: 9999px;
+}
+
+.sec_step .hd_implant_step {
+  margin-top: 6.25rem;
+  align-items: center;
+}
+
+.sec_step .hd_implant_step li {
+  /* align-items: center; */
+  justify-content: flex-start;
+}
+
+.sec_step .hd_implant_step li .con {
+  width: 54rem;
+}
+
+.sec_step .hd_implant_step li .con img {
+  aspect-ratio: 989 / 498;
+  height: auto;
+}
+
+.sec_special .first.hd_implant_special {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sec_special .first.hd_implant_special li {
+  width: auto;
+}
+
+.sec_special .first.hd_implant_special li:nth-child(odd) {
+  border-radius: 20px 0 0 20px;
+}
+
+.sec_special .first.hd_implant_special li:nth-child(even) {
+  border-radius: 0 20px 20px 0;
+}
+
+.sec_special .first.hd_implant_special li div,
+.sec_special .first.hd_implant_special li p {
+  border-radius: inherit;
+}
+
+.sec_special .first.hd_implant_special li div {
+  width: 100%;
+  background-color: #fff;
+  aspect-ratio: 930/458;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec_special .first.hd_implant_special li img {
+  width: 100%;
+  max-width: 12.5rem;
+  height: auto;
+}
+
+.sec_special .first.hd_implant_special li .special_icon_1 {
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
+}
+
+.sec_special .first.hd_implant_special li .special_icon_2 {
+  width: 100%;
+  max-width: 18rem;
+  height: auto;
+}
+
+.sec_special .first.hd_implant_special li .special_icon_3 {
+  width: 100%;
+  max-width: 18rem;
+  height: auto;
+}
+
+.sec_special .first.hd_implant_special li .special_icon_4 {
+  width: 100%;
+  max-width: 10rem;
+  height: auto;
+}
+
+.sec_effect .hd_implant_effect {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.sec_effect .hd_implant_effect li {
+  width: 100%;
+  aspect-ratio: 922 / 467;
+  margin: 0;
+}
+
+.sec_effect .hd_implant_effect li p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.sec_effect .hd_implant_effect li p b {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 968px) {
+  .plant_image {
+    width: 100%;
+    max-width: 50%;
+    display: block;
+    margin-bottom: 3.8rem;
+  }
+
+  .sec_step .step_list li:nth-child(1),
+  .sec_step .step_list li:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  .sec_step .hd_implant_step {
+    gap: 5rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_collagen {
+    padding: 5rem 2.5rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_collagen .coupling_list_item::after {
+    width: 1rem;
+    height: 0.6875rem;
+    right: -2rem;
+    top: 45%;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_collagen ul {
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_collagen .coupling_list_item {
+    gap: 1rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_collagen .coupling_list_item p {
+    padding: 0.1rem 0.2rem;
+    font-size: 1.5rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_f strong {
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    font-size: 2.85rem;
+    letter-spacing: -0.07rem;
+    line-height: 1.29;
+  }
+
+  .sec_special .first.hd_implant_special li p {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .sec_effect .hd_implant_effect li {
+    padding: 0 2rem;
+    word-break: keep-all;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .plant_image {
+    width: 100%;
+    max-width: 50%;
+    display: block;
+    margin-bottom: 3.8rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_f .reduce_list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_f .reduce_list .hd_implant_f_item {
+    width: 100%;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_f .reduce_list .hd_implant_form_item {
+    width: 100%;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_f .reduce_list .image_box {
+    margin-bottom: 1.5rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_f strong {
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    font-size: 2.85rem;
+    letter-spacing: -0.07rem;
+    line-height: 1.29;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_f .reduce_list span {
+    font-size: 2rem;
+    padding: 0.8rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_effect ul {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_collagen {
+    padding: 5rem 2.5rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_collagen .coupling_list_item::after {
+    width: 1rem;
+    height: 0.6875rem;
+    right: -2rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_collagen ul {
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_collagen .coupling_list_item {
+    gap: 1rem;
+  }
+
+  .sec_form.reduce .guide_box.hd_implant_collagen .coupling_list_item p {
+    padding: 0.1rem 0.2rem;
+    font-size: 1.5rem;
+  }
+
+  .sec_step .hd_implant_step {
+    margin-top: 0;
+    gap: 3rem;
+  }
+
+  .sec_step .hd_implant_step li .con {
+    width: 70%;
+  }
+
+  .sec_step .hd_implant_step li {
+    justify-content: space-between;
+  }
+
+  .sec_step .step_list li:nth-child(1),
+  .sec_step .step_list li:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  .sec_special .first.hd_implant_special {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .sec_special .first.hd_implant_special li div {
+    border-radius: 20px 20px 0 0;
+    padding: 1.5rem 0;
+  }
+
+  .sec_special .first.hd_implant_special li p {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .sec_special .first.hd_implant_special li .special_icon_1 {
+    max-width: 10rem;
+  }
+
+  .sec_special .first.hd_implant_special li .special_icon_2 {
+    max-width: 12rem;
+  }
+
+  .sec_special .first.hd_implant_special li .special_icon_3 {
+    max-width: 12rem;
+  }
+
+  .sec_special .first.hd_implant_special li .special_icon_4 {
+    max-width: 6rem;
+  }
+
+  .sec_effect .hd_implant_effect {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    word-break: keep-all;
+  }
+
+  .sec_effect .hd_implant_effect li {
+    padding: 0 2rem;
+  }
+
+  .sec_effect .hd_implant_effect li p {
+    font-size: 1.5rem;
+  }
+
+  .sec_effect .hd_implant_effect li p b {
+    font-size: 2rem;
+  }
+}
