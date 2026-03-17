@@ -249,6 +249,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 200px;
 }
 
 .sec_special .first.hd_implant_special li img {
